@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.min.css"/>
+		
+		<style type="text/css">
+			#first{
+				background-color: white;
+			}
+			#tleft0{
+				background-color: rgb(51,51,51);
+			}
+			#tleft{
+				
+				background-color: rgb(51,51,51);
+			}
+			#tright{
+				background-color: white;
+			}
+			#tleft span{
+				color: white;
+			}
+			#tright span{
+				color: black;
+			}
+			#myCarousel img{
+				width: 100%;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="container-fluid" >
+			<div class="row" >
+				<nav class="navbar navbar-default" style="background-color: white;">
+					<div class="container-fluid">
+						<div id="header" class="navbar-header ">
+							<a class="navbar-brand" href="#"><span id="">GameCentury</span></a>
+							
+							<button type="button" class="navbar-toggle" data-toggle="collapse"
+									data-target="#example-navbar-collapse" style="background-color: whitesmoke;">
+								<span class="sr-only">切换导航</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							
+						</div>
+						
+						<div class="collapse navbar-collapse" id="example-navbar-collapse">
+						
+							<div id="tleft" class="col-md-4" >
+								<ul class="nav navbar-nav" style="width: 100%;">
+									<li class="col-md-3 col-xs-4">
+										<a href="#" style=""><span>推荐wiki</span></a>
+									</li>
+									<li class="col-md-3 col-xs-4">
+										<a href="#" style=""><span>建站申请</span></a>
+									</li>
+									<li class="col-md-3 col-xs-4">
+										<a href="#" style=""><span>帮助中心</span></a>
+									</li>
+								</ul>
+							</div>
+							
+							<div class=" navbar-right">
+								<ul class="nav navbar-nav ">
+									<li class="col-md-6">
+										<a href="#" data-toggle="modal" data-target="#myModal"><span>登录</span></a>
+									</li>
+									<li class="col-md-6">
+										<a href="#"><span>注册</span></a>
+									</li>
+									
+								</ul>
+							</div>
+							
+							<div class="col-md-3 navbar-right" style="height: 50px; border-style: none; padding-left: 0px; " >
+								<form class="form-control" action="#" method="post" style="height: 100%; border: none;">
+									<div class="input-group has-feedback" style="height: 100%;">
+										<input  class="form-control" value="" style="width: 100%; height: 100%; " 
+											placeholder="输入"/>
+										<span class="input-group-addon" >
+											<button style="border-style: none; background-color: none;">
+												<span class="glyphicon glyphicon-search "></span>
+											</button>
+											
+										</span>
+									</div>
+									
+								</form>
+							</div>
+							
+						
+						</div>
+						
+					</div>
+				</nav>
+				
+			</div>
+		</div>
+		
+		<script src="../plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
