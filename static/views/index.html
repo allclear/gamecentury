@@ -11,38 +11,58 @@
 		<link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.min.css"/>
 		
 		<style type="text/css">
-			#first{
-				background-color: white;
-			}
-			#tleft0{
+			#tleft {
 				background-color: rgb(51,51,51);
 			}
-			#tleft{
-				
+			#tleft li {
 				background-color: rgb(51,51,51);
-			}
-			#tright{
-				background-color: white;
 			}
 			#tleft span{
 				color: white;
 			}
-			#tright span{
-				color: black;
+			#header span{
+				color: white;
+				font-size: 30px;
 			}
-			#myCarousel img{
-				width: 100%;
+			#header {
+				background-color: rgb(51,51,51);
 			}
+			#login span{
+				color: white;
+			}
+			#login {
+				background-color: rgb(51,51,51);
+			}
+			#toptitle{
+				background-color: rgb(51,51,51);
+			}
+			#search_form{
+				background-color: rgb(51,51,51);
+			}
+			.dropdown-menu > li > a:hover,
+			.dropdown-menu > li > a:focus {
+			  text-decoration: none;
+			  background-color: #66AFE9;
+			}
+			
+			#myModal  span {
+				font: "微软雅黑";
+				font-size: 15px;
+			}
+			
 		</style>
 		
 	</head>
 	<body>
-		<div class="container-fluid" >
+		<!--导航start-->
+		<div class="container-fluid" ">
 			<div class="row" >
-				<nav class="navbar navbar-default" style="background-color: white;">
+				<nav id="toptitle" class="navbar navbar-default" >
 					<div class="container-fluid">
 						<div id="header" class="navbar-header ">
-							<a class="navbar-brand" href="#"><span id="">GameCentury</span></a>
+							<a class="navbar-brand" href="index.html">
+								<span id="">GameCentury</span>
+							</a>
 							
 							<button type="button" class="navbar-toggle" data-toggle="collapse"
 									data-target="#example-navbar-collapse" style="background-color: whitesmoke;">
@@ -58,46 +78,67 @@
 						
 							<div id="tleft" class="col-md-4" >
 								<ul class="nav navbar-nav" style="width: 100%;">
-									<li class="col-md-3 col-xs-4">
-										<a href="#" style=""><span>推荐wiki</span></a>
+									<li class="col-md-push-1 col-md-4 col-xs-4" style="">
+										<a href="#" style=""><span>投稿</span></a>
 									</li>
-									<li class="col-md-3 col-xs-4">
-										<a href="#" style=""><span>建站申请</span></a>
+									<li class="col-md-push-1 col-md-4 col-xs-4" style="">
+										<a href="#" style=""><span>评论</span></a>
 									</li>
-									<li class="col-md-3 col-xs-4">
-										<a href="#" style=""><span>帮助中心</span></a>
+									<li class="col-md-push-1 col-md-4 col-xs-4" style="">
+										<a href="#" style=""><span>帮助</span></a>
 									</li>
 								</ul>
 							</div>
 							
-							<div class=" navbar-right">
-								<ul class="nav navbar-nav ">
-									<li class="col-md-6">
+							<div id="login" class=" navbar-right login_control">
+								<ul id="nologin" class="nav navbar-nav ">
+									<li class="col-xs-push-1">
 										<a href="#" data-toggle="modal" data-target="#myModal"><span>登录</span></a>
 									</li>
-									<li class="col-md-6">
+									<li class="col-xs-push-1">
 										<a href="#"><span>注册</span></a>
 									</li>
 									
 								</ul>
+								
+								<ul id="haslogin" class="nav navbar-nav " style="display: none;">
+									<li class="col-xs-push-1 hidden-xs">
+										<a href="#" style="padding-top: 2px;padding-bottom: 0px;">
+											<img src="../img/testw.jpg" style="width: 45px;height: 45px;border-radius: 50%;" />
+										</a>
+									</li>
+								    <li class="col-xs-push-1 dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+											<span id="info_username">姓名</span> <span class="caret"></span>
+										</a>
+										<ul class="dropdown-menu" style="background-color: rgb(51,51,51);">
+											<li>
+												<a href="#"><span>个人信息</span></a>
+											</li>
+											<li>
+												<a href="#"><span>我的投稿</span></a>
+											</li>
+											<li class="divider" style="color: white;"></li>
+											<li>
+												<a href="#"><span>退出</span></a>
+											</li>
+										</ul>
+								    </li>
+								</ul>
 							</div>
 							
-							<div class="col-md-3 navbar-right" style="height: 50px; border-style: none; padding-left: 0px; " >
-								<form class="form-control" action="#" method="post" style="height: 100%; border: none;">
-									<div class="input-group has-feedback" style="height: 100%;">
-										<input  class="form-control" value="" style="width: 100%; height: 100%; " 
-											placeholder="输入"/>
-										<span class="input-group-addon" >
-											<button style="border-style: none; background-color: none;">
-												<span class="glyphicon glyphicon-search "></span>
+							<div class="col-md-4 navbar-right" style="height: 50px; border-style: none; padding-left: 0px; " >
+								<form id="search_form" class="form-control" action="#" method="post" style="height: 100%; border: none;">
+									<div class="input-group">
+										<input type="text" class="form-control" />
+										<span class="input-group-btn">
+											<button class="btn btn-primary" type="button" >
+												<span class="glyphicon glyphicon-search"></span>
 											</button>
-											
-										</span>
+									    </span>
 									</div>
-									
 								</form>
 							</div>
-							
 						
 						</div>
 						
@@ -106,8 +147,81 @@
 				
 			</div>
 		</div>
+		<!--导航end-->
+		
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button id="loginclose" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h3 class="modal-title" id="myModalLabel">登录</h3>
+					</div>
+					<div class="modal-body">
+						<div>
+							<span>用户名</span>
+							<input id="username" class="form-control" type="text" />
+							
+						</div>
+						<br />
+						<div>
+							<span>密码</span>
+							<input id="password" class="form-control" type="password"/>
+						</div>
+						
+						<div class="checkbox">
+							<label>
+          						<input type="checkbox">请记住我
+       						</label>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" onclick="login()" class="btn btn-primary" >登录</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal -->
+		</div>
+		
+		
+		
+		
+		
+		
 		
 		<script src="../plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			
+			
+			function login(){
+				var ur=$("#username").val();
+				var pw=$("#password").val();
+				
+				var u="admin";
+				var p="admin";
+				if(ur==u && pw==p){
+					$("#nologin").css("display","none");
+					$("#haslogin").css("display","block");
+					
+					$("#loginclose").click();
+					
+				}
+				else{
+					alert("账号或密码错误");
+				}
+				
+			}
+			function loginout(){
+				$("#nologin").css("display","block");
+				$("#haslogin").css("display","none");
+			}
+			
+			function remberLogin(){
+				$("#remberlogin").click();
+			}
+		</script>
 	</body>
 </html>
