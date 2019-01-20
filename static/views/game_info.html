@@ -9,31 +9,9 @@
 		<title>game_center</title>
 		
 		<link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.min.css"/>
-		
+		<link rel="stylesheet" href="../css/navigation.css" />
 		<style type="text/css">
-			#first{
-				background-color: white;
-			}
-			#tleft0{
-				background-color: rgb(51,51,51);
-			}
-			#tleft{
-				
-				background-color: rgb(51,51,51);
-			}
-			#tright{
-				background-color: white;
-			}
-			#tleft span{
-				color: white;
-			}
-			#tright span{
-				color: black;
-			}
-			#myCarousel img{
-				width: 500px;
-				height: 350px;
-			}
+			
 			
 			.backgroundcolor{
 				background-color: pink;
@@ -56,7 +34,7 @@
 	</head>
 	<body background="../img/背景1.gif">
 		<!--导航start-->
-		<div class="container-fluid" ">
+		<div class="container">
 			<div class="row" >
 				<nav id="toptitle" class="navbar navbar-default" >
 					<div class="container-fluid">
@@ -112,7 +90,7 @@
 										<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 											<span id="info_username">姓名</span> <span class="caret"></span>
 										</a>
-										<ul class="dropdown-menu" style="background-color: rgb(51,51,51);">
+										<ul id="mydropdownm" class="dropdown-menu" style="background-color: rgb(51,51,51);">
 											<li>
 												<a href="#"><span>个人信息</span></a>
 											</li>
@@ -148,36 +126,61 @@
 				
 			</div>
 		</div>
+
+		
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button id="loginclose" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h3 class="modal-title" id="myModalLabel">登录</h3>
+					</div>
+					<div class="modal-body">
+						<div>
+							<span>用户名</span>
+							<input id="username" class="form-control" type="text" />
+							
+						</div>
+						<br />
+						<div>
+							<span>密码</span>
+							<input id="password" class="form-control" type="password"/>
+						</div>
+						
+						<div class="checkbox">
+							<label>
+          						<input type="checkbox">请记住我
+       						</label>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" onclick="login()" class="btn btn-primary" >登录</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal -->
+		</div>
 		<!--导航end-->
-		
-		
-		
+
+
+
+
 		<!--导航下开始-->
 		<!--插入图片-->
-			
-			
-			
-			
-			
-		<div class="container-fluid" >
+		<div class=container-fluid>
 			<div class="row">
 				<img src="../img/under1.jpg" width="100%" height="100px" >
 			</div>
 		</div>
-		<!--导航下图片结束-->
 		
 		
 		<hr />
-		
-		<!--游戏名称-->
-		<div class="container-fluid" >
-			<div class="row">
-				<div align="center">
-					<h1>游戏名称</h1>
-				</div>
-			</div>
+		<div align="center">
+			<h1>游戏名称</h1>
 		</div>
-		<!--游戏名称end-->
+
 
 
 
@@ -198,13 +201,13 @@
 						    <!-- 轮播（Carousel）项目 -->
 						    <div class="carousel-inner">
 						        <div class="item active">
-						            <img src="../img/testw.jpg" alt="First slide" width="900px"height="300px">
+						            <img src="../img/testw.jpg" alt="First slide" width="700px"height="300px">
 						        </div>
 						        <div class="item">
-						            <img src="../img/under.jpg" alt="Second slide" width="900px"height="300px">
+						            <img src="../img/under.jpg" alt="Second slide" width="700px"height="300px">
 						        </div>
 						        <div class="item">
-						            <img src="../img/under1.jpg" alt="Third slide" width="900px"height="300px">
+						            <img src="../img/under1.jpg" alt="Third slide" width="700px"height="300px">
 						        </div>
 						    </div>
 						    <!-- 轮播（Carousel）导航 -->
@@ -217,13 +220,16 @@
 				</div>
 		</div>
 		
-		<!--轮播结束-->
 		
-			<br />
-			<br />
-			<br />
-			<br />
 			
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
 		<!--轮播结束-->	
 			
 		<!--文字描述-->
