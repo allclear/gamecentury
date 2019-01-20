@@ -1,0 +1,38 @@
+#tleft {
+	background-color: rgb(51,51,51);
+}
+#tleft li {
+	background-color: rgb(51,51,51);
+}
+#tleft span{
+	color: white;
+}
+#header span{
+	color: white;
+	font-size: 30px;
+}
+#header {
+	background-color: rgb(51,51,51);
+}
+#login span{
+	color: white;
+}
+#login {
+	background-color: rgb(51,51,51);
+}
+#toptitle{
+	background-color: rgb(51,51,51);
+}
+#search_form{
+	background-color: rgb(51,51,51);
+}
+#mydropdownm > li > a:hover,
+#mydropdownm > li > a:focus {
+	text-decoration: none;
+	background-color: #66AFE9;
+}
+			
+#myModal  span {
+	font: "微软雅黑";
+	font-size: 15px;
+}
