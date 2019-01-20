@@ -1,0 +1,13 @@
+.mydiv{
+	width: 100%; 
+	text-align: center; 
+	background-color: #5cb85c;
+	border-radius: .30em;
+	height: 25px;
+	padding-top: 2px;
+	margin: 1px;
+}
+.plantform div div div a span{
+	color: white;
+	font-weight: bolder;
+}
