@@ -10,64 +10,10 @@
 		
 		<link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="../plugins/swiper/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/navigation.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/classification.css"/>
 		
 		<style type="text/css">
-			#tleft {
-				background-color: rgb(51,51,51);
-			}
-			#tleft li {
-				background-color: rgb(51,51,51);
-			}
-			#tleft span{
-				color: white;
-			}
-			#header span{
-				color: white;
-				font-size: 30px;
-			}
-			#header {
-				background-color: rgb(51,51,51);
-			}
-			#login span{
-				color: white;
-			}
-			#login {
-				background-color: rgb(51,51,51);
-			}
-			#toptitle{
-				background-color: rgb(51,51,51);
-			}
-			#search_form{
-				background-color: rgb(51,51,51);
-			}
-			.dropdown-menu > li > a:hover,
-			.dropdown-menu > li > a:focus {
-			  text-decoration: none;
-			  background-color: #66AFE9;
-			}
-			
-			#myModal  span {
-				font: "微软雅黑";
-				font-size: 15px;
-			}
-			
-			.label {
-				font-size: 15px;
-			}
-			
-			.mydiv{
-				width: 100%; 
-				text-align: center; 
-				background-color: #5cb85c;
-				border-radius: .30em;
-				height: 25px;
-				padding-top: 2px;
-				margin: 1px;
-			}
-			.plantform div div div a span{
-				color: white;
-				font-weight: bolder;
-			}
 			
 			#ranking div ul li{
 				font: "微软雅黑";
@@ -79,6 +25,19 @@
 			#myswiper img{
 				width: 100%;
 				height: 100%;
+			}
+			
+			.thumbnail {
+				box-shadow: 2px 2px 2px #888888;
+			}
+			/*图片选中效果*/
+			.thumbnail img {
+				transition: all 0.6s;
+			}
+		
+			.thumbnail img:hover {
+				box-shadow: 3px 3px 3px #888888;
+				transform: scale(1.2);
 			}
 			
 		</style>
@@ -142,7 +101,7 @@
 										<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 											<span id="info_username">姓名</span> <span class="caret"></span>
 										</a>
-										<ul class="dropdown-menu" style="background-color: rgb(51,51,51);">
+										<ul id="mydropdownm" class="dropdown-menu" style="background-color: rgb(51,51,51);">
 											<li>
 												<a href="#"><span>个人信息</span></a>
 											</li>
@@ -335,142 +294,108 @@
 				<!--左部冷门推荐 start-->
 				<div class="col-md-8 col-xs-12" style="padding-left: 0px;">
 					<hr /><!--分割线-->
-					<span style="font-size: 20px; font-weight: bolder;">冷门推荐</span>
+					<span style="font-size: 20px; font-weight: bolder;">冷门发掘</span>
 					<hr style="margin-top: 0px;"/><!--分割线-->
 					<!--冷门游戏列表-->
 					<div>
 						<div class="container-fluid">
-							<div class="row">
+							<div id="colerlist" class="row">
 								
 								<div class="col-xs-6 col-md-3">
 									<div class="thumbnail">
-										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
-										<div class="caption">
-											<h3>缩略图标签</h3>
-											<p class="pull-right">
-												<a href="#" class="text-danger">
-													<span class="glyphicon glyphicon-trash"></span>
-												</a>
-											</p>
-											<p>
-												<a href="#" class="text-warning">
-													<span class="glyphicon glyphicon-edit"></span>
-												</a>
-											</p>
+										<div style="">
+											<h4>游戏1</h4>
 										</div>
+										<a href="#" class="">
+											<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+										</a>
+																				
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="thumbnail">
-										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
-										<div class="caption">
-											<h3>缩略图标签</h3>
-											<p class="pull-right">
-												<a href="#" class="text-danger">
-													<span class="glyphicon glyphicon-trash"></span>
-												</a>
-											</p>
-											<p>
-												<a href="#" class="text-warning">
-													<span class="glyphicon glyphicon-edit"></span>
-												</a>
-											</p>
+										<div style="">
+											<h4>游戏1</h4>
 										</div>
+										<a href="#" class="">
+											<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+										</a>
+																				
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="thumbnail">
-										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
-										<div class="caption">
-											<h3>缩略图标签</h3>
-											<p class="pull-right">
-												<a href="#" class="text-danger">
-													<span class="glyphicon glyphicon-trash"></span>
-												</a>
-											</p>
-											<p>
-												<a href="#" class="text-warning">
-													<span class="glyphicon glyphicon-edit"></span>
-												</a>
-											</p>
+										<div style="">
+											<h4>游戏1</h4>
 										</div>
+										<a href="#" class="">
+											<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+										</a>
+																				
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="thumbnail">
-										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
-										<div class="caption">
-											<h3>缩略图标签</h3>
-											<p class="pull-right">
-												<a href="#" class="text-danger">
-													<span class="glyphicon glyphicon-trash"></span>
-												</a>
-											</p>
-											<p>
-												<a href="#" class="text-warning">
-													<span class="glyphicon glyphicon-edit"></span>
-												</a>
-											</p>
+										<div style="">
+											<h4>游戏1</h4>
 										</div>
+										<a href="#" class="">
+											<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+										</a>
+																				
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="thumbnail">
-										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
-										<div class="caption">
-											<h3>缩略图标签</h3>
-											<p class="pull-right">
-												<a href="#" class="text-danger">
-													<span class="glyphicon glyphicon-trash"></span>
-												</a>
-											</p>
-											<p>
-												<a href="#" class="text-warning">
-													<span class="glyphicon glyphicon-edit"></span>
-												</a>
-											</p>
+										<div style="">
+											<h4>游戏1</h4>
 										</div>
+										<a href="#" class="">
+											<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+										</a>
+																				
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="thumbnail">
-										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
-										<div class="caption">
-											<h3>缩略图标签</h3>
-											<p class="pull-right">
-												<a href="#" class="text-danger">
-													<span class="glyphicon glyphicon-trash"></span>
-												</a>
-											</p>
-											<p>
-												<a href="#" class="text-warning">
-													<span class="glyphicon glyphicon-edit"></span>
-												</a>
-											</p>
+										<div style="">
+											<h4>游戏1</h4>
 										</div>
+										<a href="#" class="">
+											<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+										</a>
+																				
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="thumbnail">
-										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
-										<div class="caption">
-											<h3>缩略图标签</h3>
-											<p class="pull-right">
-												<a href="#" class="text-danger">
-													<span class="glyphicon glyphicon-trash"></span>
-												</a>
-											</p>
-											<p>
-												<a href="#" class="text-warning">
-													<span class="glyphicon glyphicon-edit"></span>
-												</a>
-											</p>
+										<div style="">
+											<h4>游戏1</h4>
 										</div>
+										<a href="#" class="">
+											<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+										</a>
+																				
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<div class="thumbnail">
+										<div style="">
+											<h4>游戏1</h4>
+										</div>
+										<a href="#" class="">
+											<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+										</a>
+																				
 									</div>
 								</div>
 								
 							</div>
+							<hr />
 							<!--row end-->
+							<center class="row" >
+								<button id="morecoler" onclick="moreColer()" class="btn btn-success">加载更多</button>
+							</center>
 						</div>
 						<!--container end-->
 						
@@ -479,12 +404,16 @@
 					
 				</div>
 				<!--左部冷门推荐end-->
+				
+				
 			
 			</div>
 			<!--row end-->
 			
 		</div>
 		<!--container end-->
+		
+		
 		
 		
 		<div class="container">
@@ -537,14 +466,32 @@
 			}
 
 			var swiper = new Swiper('.swiper-container', {
-				
+				speed:500,
 				loop: true,
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,
 				},
-			
+				autoplay: {
+        			delay: 4000,
+        			disableOnInteraction: false,
+        			
+      			},
+      			grabCursor: true,
+      			effect:'cube',
+				cubeEffect: {
+						shadow: true,
+						slideShadows: true,
+						shadowOffset: 20,
+						shadowScale: 0.94,
+				},
+				
 			});
+		
+			function moreColer(){
+				var newcolor="0";
+				$("#colerlist").append(newcolor);
+			}
 		</script>
 	</body>
 </html>
