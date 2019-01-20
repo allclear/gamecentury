@@ -9,6 +9,7 @@
 		<title></title>
 		
 		<link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="../plugins/swiper/css/swiper.min.css">
 		
 		<style type="text/css">
 			#tleft {
@@ -50,12 +51,42 @@
 				font-size: 15px;
 			}
 			
+			.label {
+				font-size: 15px;
+			}
+			
+			.mydiv{
+				width: 100%; 
+				text-align: center; 
+				background-color: #5cb85c;
+				border-radius: .30em;
+				height: 25px;
+				padding-top: 2px;
+				margin: 1px;
+			}
+			.plantform div div div a span{
+				color: white;
+				font-weight: bolder;
+			}
+			
+			#ranking div ul li{
+				font: "微软雅黑";
+				font-size:15px ;
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+			
+			#myswiper img{
+				width: 100%;
+				height: 100%;
+			}
+			
 		</style>
 		
 	</head>
 	<body>
 		<!--导航start-->
-		<div class="container-fluid" ">
+		<div class="container">
 			<div class="row" >
 				<nav id="toptitle" class="navbar navbar-default" >
 					<div class="container-fluid">
@@ -184,18 +215,300 @@
 			<!-- /.modal -->
 		</div>
 		
+		<!--分类-->
+		<div class="container">
+			<div class="row">
+				<hr  />
+			</div>
+			
+			
+			<div class="row plantform">
+				<div class="col-md-1 col-xs-2">
+					<div class="mydiv" style="background-color: #31B0D5;width: 54px;margin-right: 20px;">
+						<span style="font: '微软雅黑'; font-weight: bolder; color: white;">平台</span>					
+					</div>
+				</div>
+				<div id="plants" class="col-md-11 col-xs-10">
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>FC</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>SFC</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>GB</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>GBC</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>GBA</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>NDS</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>PS</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>PSP</span></a></div>				
+				</div>
+			</div>
+			
+			<div class="row">
+				<hr  />
+			</div>
+
+			<div class="row plantform">
+				<div class="col-md-1 col-xs-2">
+					<div class="mydiv" style="background-color: #31B0D5;width: 54px;margin-right: 20px;">
+						<span style="font: '微软雅黑'; font-weight: bolder; color: white;">类型</span>					
+					</div>
+				</div>
+				<div class="col-md-11 col-xs-10">
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>角色扮演</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>冒险</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>动作</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>射击</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>格斗</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>竞速</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>体育</span></a></div>
+					<div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>策略</span></a></div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<hr  />
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				
+				<!--热评排行start-->
+				<div id="ranking" class="pull-right col-md-3 hidden-xs" style="border: 1px solid black; box-shadow: 10px 10px 5px #888888;">
+					<h4>近期热评</h4>
+					<hr style="margin-top: 0px; margin-bottom: 5px;"/>
+					<div style="padding-left: 15px;">
+						<ul class="" style="list-style: decimal; padding-left:0px ;" >
+							<li><a href="#">重装机兵</a></li>
+							<li><a href="#">热血格斗</a></li>
+							<li><a href="#">口袋妖怪绿宝石</a></li>
+							<li><a href="#">塞尔达传说：时之沙漏</a></li>
+							<li><a href="#">火焰文章：圣魔之光石 塞尔达传说：时之沙漏</a></li>
+							<li><a href="#">最终幻想7</a></li>
+							<li><a href="#">塞尔达传说：时之沙漏</a></li>
+							<li><a href="#">勇者斗恶龙9</a></li>
+							<li><a href="#">最终幻想7</a></li>
+							<li><a href="#">重装机兵：沙尘之锁</a></li>
+							<li><a href="#">重装机兵</a></li>
+							<li><a href="#">热血格斗</a></li>
+							<li><a href="#">口袋妖怪绿宝石</a></li>
+							<li><a href="#">塞尔达传说：时之沙漏</a></li>
+							<li><a href="#">火焰文章：圣魔之光石 塞尔达传说：时之沙漏</a></li>
+							<li><a href="#">最终幻想7</a></li>
+							<li><a href="#">塞尔达传说：时之沙漏</a></li>
+							<li><a href="#">勇者斗恶龙9</a></li>
+							<li><a href="#">最终幻想7</a></li>
+							<li><a href="#">重装机兵：沙尘之锁</a></li>
+						</ul>
+					</div>
+					
+				</div>
+				<!--热评排行end-->
+			
+				<!--左部 热评榜 start-->
+				<div class="col-md-8 col-xs-12" style="padding-left: 0px;">
+					
+					
+					<span style="font-size: 20px; font-weight: bolder;">热评Top3</span>
+					<a href="#" style="">
+						<span class="glyphicon glyphicon-plus pull-right"></span>
+					</a>
+					
+					<!-- Swiper -->
+					<div id="myswiper" class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#"><img src="../img/testw.jpg" /></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#"><img src="../img/testw.jpg" /></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#"><img src="../img/testw.jpg" /></a>
+							</div>
+						</div>
+						
+						<!-- Add Pagination -->
+    					<div class="swiper-pagination swiper-pagination-white"></div>
+					</div>
+					
+				</div>
+				<!--左部 热评榜 end-->
+				
+				<!--左部冷门推荐 start-->
+				<div class="col-md-8 col-xs-12" style="padding-left: 0px;">
+					<hr /><!--分割线-->
+					<span style="font-size: 20px; font-weight: bolder;">冷门推荐</span>
+					<hr style="margin-top: 0px;"/><!--分割线-->
+					<!--冷门游戏列表-->
+					<div>
+						<div class="container-fluid">
+							<div class="row">
+								
+								<div class="col-xs-6 col-md-3">
+									<div class="thumbnail">
+										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
+										<div class="caption">
+											<h3>缩略图标签</h3>
+											<p class="pull-right">
+												<a href="#" class="text-danger">
+													<span class="glyphicon glyphicon-trash"></span>
+												</a>
+											</p>
+											<p>
+												<a href="#" class="text-warning">
+													<span class="glyphicon glyphicon-edit"></span>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<div class="thumbnail">
+										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
+										<div class="caption">
+											<h3>缩略图标签</h3>
+											<p class="pull-right">
+												<a href="#" class="text-danger">
+													<span class="glyphicon glyphicon-trash"></span>
+												</a>
+											</p>
+											<p>
+												<a href="#" class="text-warning">
+													<span class="glyphicon glyphicon-edit"></span>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<div class="thumbnail">
+										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
+										<div class="caption">
+											<h3>缩略图标签</h3>
+											<p class="pull-right">
+												<a href="#" class="text-danger">
+													<span class="glyphicon glyphicon-trash"></span>
+												</a>
+											</p>
+											<p>
+												<a href="#" class="text-warning">
+													<span class="glyphicon glyphicon-edit"></span>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<div class="thumbnail">
+										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
+										<div class="caption">
+											<h3>缩略图标签</h3>
+											<p class="pull-right">
+												<a href="#" class="text-danger">
+													<span class="glyphicon glyphicon-trash"></span>
+												</a>
+											</p>
+											<p>
+												<a href="#" class="text-warning">
+													<span class="glyphicon glyphicon-edit"></span>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<div class="thumbnail">
+										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
+										<div class="caption">
+											<h3>缩略图标签</h3>
+											<p class="pull-right">
+												<a href="#" class="text-danger">
+													<span class="glyphicon glyphicon-trash"></span>
+												</a>
+											</p>
+											<p>
+												<a href="#" class="text-warning">
+													<span class="glyphicon glyphicon-edit"></span>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<div class="thumbnail">
+										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
+										<div class="caption">
+											<h3>缩略图标签</h3>
+											<p class="pull-right">
+												<a href="#" class="text-danger">
+													<span class="glyphicon glyphicon-trash"></span>
+												</a>
+											</p>
+											<p>
+												<a href="#" class="text-warning">
+													<span class="glyphicon glyphicon-edit"></span>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<div class="thumbnail">
+										<img class="lazy" data-original="../img/testw.jpg" alt="通用的占位符缩略图">
+										<div class="caption">
+											<h3>缩略图标签</h3>
+											<p class="pull-right">
+												<a href="#" class="text-danger">
+													<span class="glyphicon glyphicon-trash"></span>
+												</a>
+											</p>
+											<p>
+												<a href="#" class="text-warning">
+													<span class="glyphicon glyphicon-edit"></span>
+												</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<!--row end-->
+						</div>
+						<!--container end-->
+						
+					</div>
+					<!--冷门游戏列表end-->
+					
+				</div>
+				<!--左部冷门推荐end-->
+			
+			</div>
+			<!--row end-->
+			
+		</div>
+		<!--container end-->
 		
 		
+		<div class="container">
+			<div class="row">
+				<div class="footer">footer</div>
+			</div>
+		</div>
 		
 		
 		
 		
 		<script src="../plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/swiper/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/jquery/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
 		
 		<script type="text/javascript">
-			
-			
+			$(function(){
+				
+				$("img.lazy").lazyload({
+					effect: "fadeIn"
+				})
+			})
+
 			function login(){
 				var ur=$("#username").val();
 				var pw=$("#password").val();
@@ -222,6 +535,16 @@
 			function remberLogin(){
 				$("#remberlogin").click();
 			}
+
+			var swiper = new Swiper('.swiper-container', {
+				
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			
+			});
 		</script>
 	</body>
 </html>
