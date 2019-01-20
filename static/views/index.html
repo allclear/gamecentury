@@ -29,15 +29,15 @@
 				height: 100%;
 			}
 			
-			.thumbnail {
+			#colerlist div.thumbnail {
 				box-shadow: 2px 2px 2px #888888;
 			}
 			/*图片选中效果*/
-			.thumbnail img {
+			#colerlist div.thumbnail img {
 				transition: all 0.6s;
 			}
 		
-			.thumbnail img:hover {
+			#colerlist div.thumbnail img:hover {
 				box-shadow: 3px 3px 3px #888888;
 				transform: scale(1.2);
 			}
@@ -68,15 +68,15 @@
 						
 						<div class="collapse navbar-collapse" id="example-navbar-collapse">
 						
-							<div id="tleft" class="col-md-4" >
+							<div id="tleft" class="col-md-4 col-sm-10" >
 								<ul class="nav navbar-nav" style="width: 100%;">
-									<li class="col-md-push-1 col-md-4 col-xs-4" style="">
+									<li class="col-md-push-1 col-md-4 col-sm-2 col-xs-4" style="">
 										<a href="#" style=""><span>投稿</span></a>
 									</li>
-									<li class="col-md-push-1 col-md-4 col-xs-4" style="">
+									<li class="col-md-push-1 col-md-4 col-sm-2 col-xs-4" style="">
 										<a href="#" style=""><span>评论</span></a>
 									</li>
-									<li class="col-md-push-1 col-md-4 col-xs-4" style="">
+									<li class="col-md-push-1 col-md-4 col-sm-2 col-xs-4" style="">
 										<a href="#" style=""><span>帮助</span></a>
 									</li>
 								</ul>
@@ -234,7 +234,7 @@
 			<div class="row">
 				
 				<!--热评排行start-->
-				<div id="ranking" class="pull-right col-md-3 hidden-xs" style="border: 1px solid black; box-shadow: 10px 10px 5px #888888;">
+				<div id="ranking" class="pull-right col-md-3 hidden-sm hidden-xs" style="border: 1px solid black; box-shadow: 10px 10px 5px #888888;">
 					<h4>近期热评</h4>
 					<hr style="margin-top: 0px; margin-bottom: 5px;"/>
 					<div style="padding-left: 15px;">
@@ -266,7 +266,7 @@
 				<!--热评排行end-->
 			
 				<!--左部 热评榜 start-->
-				<div class="col-md-8 col-xs-12" style="padding-left: 0px;">
+				<div class="col-md-8 col-xs-12" style="">
 					
 					
 					<span style="font-size: 20px; font-weight: bolder;">热评Top3</span>
@@ -290,15 +290,183 @@
 						
 						<!-- Add Pagination -->
     					<div class="swiper-pagination swiper-pagination-white"></div>
+    					
+						<!-- Add Arrows -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
 					</div>
 					
 				</div>
 				<!--左部 热评榜 end-->
 				
-				<!--左部冷门推荐 start-->
-				<div class="col-md-8 col-xs-12" style="padding-left: 0px;">
+				<!--左部最新投稿start-->
+				<div class="col-md-8 col-xs-12" style="">
 					<hr /><!--分割线-->
-					<span style="font-size: 20px; font-weight: bolder;">冷门发掘</span>
+					<div class="container-fluid">
+						<div class="row">
+							<ul class="nav nav-tabs">
+								<li id="newdynamic" class="active"  style="cursor: pointer;" onclick="changeToDynamic()">
+									<a>最新动态</a>
+								</li>
+								<li id="newcontribute" class="" style="cursor: pointer;" onclick="changeToContribute()">
+									<a>最新投稿</a>
+								</li>
+								<li style="float: right; margin-left: 5px;">
+									<button class="btn btn-default">
+										更多<span class="glyphicon glyphicon-chevron-right"></span>
+									</button>
+								</li>
+								<li style="float: right;">
+									<button class="btn btn-default">
+										<span class="glyphicon glyphicon-refresh"></span>
+										<span>5</span>条
+									</button>
+								</li>
+								
+							</ul>
+						</div>
+						
+						<div class="row" style="border: 1px solid #ddd; border-top: none; padding-top: 10px;">
+							
+							<div class="col-xs-6 col-md-3">
+								<div class="thumbnail">
+									<a href="#" class="">
+										<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+									</a>
+									<h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
+										伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
+									</h6>
+									<div>
+										<span class="badge">12</span>
+										<span class="glyphicon glyphicon-align-right pull-right"></span>
+									</div>
+																			
+								</div>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<div class="thumbnail">
+									<a href="#" class="">
+										<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+									</a>
+									<h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
+										伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
+									</h6>
+									<div>
+										<span class="badge">12</span>
+										<span class="glyphicon glyphicon-align-right pull-right"></span>
+									</div>
+																			
+								</div>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<div class="thumbnail">
+									<a href="#" class="">
+										<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+									</a>
+									<h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
+										伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
+									</h6>
+									<div>
+										<span class="badge">12</span>
+										<span class="glyphicon glyphicon-align-right pull-right"></span>
+									</div>
+																			
+								</div>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<div class="thumbnail">
+									<a href="#" class="">
+										<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+									</a>
+									<h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
+										伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
+									</h6>
+									<div>
+										<span class="badge">12</span>
+										<span class="glyphicon glyphicon-align-right pull-right"></span>
+									</div>
+																			
+								</div>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<div class="thumbnail">
+									<a href="#" class="">
+										<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+									</a>
+									<h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
+										伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
+									</h6>
+									<div>
+										<span class="badge">12</span>
+										<span class="glyphicon glyphicon-align-right pull-right"></span>
+									</div>
+																			
+								</div>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<div class="thumbnail">
+									<a href="#" class="">
+										<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+									</a>
+									<h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
+										伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
+									</h6>
+									<div>
+										<span class="badge">12</span>
+										<span class="glyphicon glyphicon-align-right pull-right"></span>
+									</div>
+																			
+								</div>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<div class="thumbnail">
+									<a href="#" class="">
+										<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+									</a>
+									<h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
+										伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
+									</h6>
+									<div>
+										<span class="badge">12</span>
+										<span class="glyphicon glyphicon-align-right pull-right"></span>
+									</div>
+																			
+								</div>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<div class="thumbnail">
+									<a href="#" class="">
+										<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+									</a>
+									<h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
+										伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
+									</h6>
+									<div>
+										<span class="badge">12</span>
+										<span class="glyphicon glyphicon-align-right pull-right"></span>
+									</div>
+																			
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+
+					
+
+					
+					
+					
+					
+				</div>
+				<!--左部最新投稿end-->
+				
+				
+				<!--左部冷门推荐 start-->
+				<div class="col-md-8 col-xs-12" style="">
+					<hr /><!--分割线-->
+					<span style="font-size: 20px; font-weight: bolder;">冷作发掘</span>
 					<hr style="margin-top: 0px;"/><!--分割线-->
 					<!--冷门游戏列表-->
 					<div>
@@ -382,17 +550,18 @@
 																				
 									</div>
 								</div>
-								<div class="col-xs-6 col-md-3">
-									<div class="thumbnail">
-										<div style="">
+								<div class='col-xs-6 col-md-3'>
+									<div class='thumbnail'>
+										<div>
 											<h4>游戏1</h4>
 										</div>
-										<a href="#" class="">
-											<img class="lazy" data-original="../img/w方形图.PNG" alt="通用的占位符缩略图">
+										<a href='#' >
+											<img class='lazy' data-original='../img/w方形图.PNG' alt='通用的占位符缩略图'>
 										</a>
 																				
 									</div>
 								</div>
+								
 								
 							</div>
 							<hr />
@@ -410,6 +579,7 @@
 				<!--左部冷门推荐end-->
 				
 				
+
 			
 			</div>
 			<!--row end-->
@@ -433,6 +603,8 @@
 		<script src="../plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../plugins/swiper/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../plugins/jquery/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
+		<!--登录js-->
+		<script src="../js/navlogin.js" type="text/javascript" charset="utf-8"></script>
 		
 		<script type="text/javascript">
 			$(function(){
@@ -442,32 +614,6 @@
 				})
 			})
 
-			function login(){
-				var ur=$("#username").val();
-				var pw=$("#password").val();
-				
-				var u="admin";
-				var p="admin";
-				if(ur==u && pw==p){
-					$("#nologin").css("display","none");
-					$("#haslogin").css("display","block");
-					
-					$("#loginclose").click();
-					
-				}
-				else{
-					alert("账号或密码错误");
-				}
-				
-			}
-			function loginout(){
-				$("#nologin").css("display","block");
-				$("#haslogin").css("display","none");
-			}
-			
-			function remberLogin(){
-				$("#remberlogin").click();
-			}
 
 			var swiper = new Swiper('.swiper-container', {
 				speed:500,
@@ -489,12 +635,44 @@
 						shadowOffset: 20,
 						shadowScale: 0.94,
 				},
+				//两边按钮
+				navigation: {
+			        nextEl: '.swiper-button-next',
+			        prevEl: '.swiper-button-prev',
+			      },
 				
 			});
 		
 			function moreColer(){
-				var newcolor="0";
-				$("#colerlist").append(newcolor);
+				var addcolor="";
+				for(var i=0;i<8;i++){
+					var newcolor="<div class='col-xs-6 col-md-3'>"+
+										"<div class='thumbnail'>"+
+											"<div>"+
+												"<h4>游戏1</h4>"+
+											"</div>"+
+											"<a href='#' >"+
+												"<img class='lazy' data-original='../img/w方形图.PNG' alt='通用的占位符缩略图'>"+
+											"</a>"+
+										"</div>"+
+									"</div>";
+					addcolor=addcolor+newcolor;
+					
+				}
+				$("#colerlist").append(addcolor);
+				$("img.lazy").lazyload({effect: "fadeIn"});
+			}
+			
+			function changeToDynamic(){
+				$("#newcontribute").removeClass("active");
+				$("#newdynamic").addClass("active");
+				
+				
+			}
+			
+			function changeToContribute(){
+				$("#newdynamic").removeClass("active");
+				$("#newcontribute").addClass("active");
 			}
 		</script>
 	</body>
