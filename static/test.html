@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
+		<style>
+			.change_page {
+			    width: auto;
+			    height: auto;
+			    padding: 0 20px;
+			    text-align: right;
+			    font: 12px/1.5 Arial;
+			    color: #4E4E4E;
+			}
+			.change_page a.active {
+			    background: #0091FF;
+			    color: #FFF;
+			}
+			.change_page a {
+			    display: inline-block;
+			    width: auto;
+			    height: 18px;
+			    margin: 0 2px;
+			    padding: 4px 9px 2px 9px;
+			    background: #DDD;
+			    font: 12px/1.5 SimSun;
+			    color: #4E4E4E;
+			    vertical-align: middle;
+			}
+			.change_page .total {
+			    float: left;
+			    font: 12px/2 SimSun;
+			    color: #666;
+			}
+			a {
+			    text-decoration: none;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="change_page">
+			<div class="total"> 1/42 页 共 <span class="number">831 </span> 款游戏</div>
+			<a target="_self" href="/danji/list/106/4?p=1" class="active current">1</a>
+			<a target="_self" href="/danji/list/106/4?p=2">2</a><a target="_self" href="/danji/list/106/4?p=3">3</a><a target="_self" href="/danji/list/106/4?p=4">4</a><a target="_self" href="/danji/list/106/4?p=5">5</a>...<a target="_self" href="/danji/list/106/4?p=42">42</a><a target="_self" href="/danji/list/106/4?p=2" class="next">下一页</a> &nbsp; 第<input name="" type="text" maxlength="5" class="page_jump_number">页<a href="#" class="page_jump_button">确定</a><span page_max="42" page_template="/danji/list/106/4?p=|||page|||"></span>
+		</div>
+	</body>
+</html>
