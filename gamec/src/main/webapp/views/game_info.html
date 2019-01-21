@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>game_center</title>
+		
+		<link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="../css/navigation.css" />
+		<style type="text/css">
+			
+			.backgroundcolor{
+				background-color: pink;
+			}
+			
+			.lunbo{
+				align-items: center;
+			}
+			#weizhi{
+				width: 500px;
+				height:300px;
+				
+			}
+			
+			
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<!--导航start-->
+		
+				
+		<div class="container">
+			<div class="row" >
+				<nav id="toptitle" class="navbar navbar-default" >
+					<div class="container-fluid">
+						<div id="header" class="navbar-header ">
+							<a class="navbar-brand" href="index.html">
+								<span id="">GameCentury</span>
+							</a>
+							
+							<button type="button" class="navbar-toggle" data-toggle="collapse"
+									data-target="#example-navbar-collapse" style="background-color: whitesmoke;">
+								<span class="sr-only">切换导航</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							
+						</div>
+						
+						<div class="collapse navbar-collapse" id="example-navbar-collapse">
+						
+							<div id="tleft" class="col-md-4 col-sm-10" >
+								<ul class="nav navbar-nav" style="width: 100%;">
+									<li class="col-md-push-1 col-md-4 col-sm-2 col-xs-4" style="">
+										<a href="#" style=""><span>投稿</span></a>
+									</li>
+									<li class="col-md-push-1 col-md-4 col-sm-2 col-xs-4" style="">
+										<a href="#" style=""><span>评论</span></a>
+									</li>
+									<li class="col-md-push-1 col-md-4 col-sm-2 col-xs-4" style="">
+										<a href="#" style=""><span>帮助</span></a>
+									</li>
+								</ul>
+							</div>
+							
+							<div id="login" class=" navbar-right login_control">
+								<ul id="nologin" class="nav navbar-nav ">
+									<li class="col-xs-push-1">
+										<a href="#" data-toggle="modal" data-target="#myModal"><span>登录</span></a>
+									</li>
+									<li class="col-xs-push-1">
+										<a href="#"><span>注册</span></a>
+									</li>
+									
+								</ul>
+								
+								<ul id="haslogin" class="nav navbar-nav " style="display: none;">
+									<li class="col-xs-push-1 hidden-xs">
+										<a href="#" style="padding-top: 2px;padding-bottom: 0px;">
+											<img src="../img/testw.jpg" style="width: 45px;height: 45px;border-radius: 50%;" />
+										</a>
+									</li>
+								    <li class="col-xs-push-1 dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+											<span id="info_username">姓名</span> <span class="caret"></span>
+										</a>
+										<ul id="mydropdownm" class="dropdown-menu" style="background-color: rgb(51,51,51);">
+											<li>
+												<a href="#"><span>个人信息</span></a>
+											</li>
+											<li>
+												<a href="#"><span>我的投稿</span></a>
+											</li>
+											<li class="divider" style="color: white;"></li>
+											<li>
+												<a href="#"><span>退出</span></a>
+											</li>
+										</ul>
+								    </li>
+								</ul>
+							</div>
+							
+							<div class="col-md-4 navbar-right" style="height: 50px; border-style: none; padding-left: 0px; " >
+								<form id="search_form" class="form-control" action="#" method="post" style="height: 100%; border: none;">
+									<div class="input-group">
+										<input type="text" class="form-control" />
+										<span class="input-group-btn">
+											<button class="btn btn-primary" type="button" >
+												<span class="glyphicon glyphicon-search"></span>
+											</button>
+									    </span>
+									</div>
+								</form>
+							</div>
+						
+						</div>
+						
+					</div>
+				</nav>
+				
+			</div>
+		</div>
+			
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button id="loginclose" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h3 class="modal-title" id="myModalLabel">登录</h3>
+					</div>
+					<div class="modal-body">
+						<div>
+							<span>用户名</span>
+							<input id="username" class="form-control" type="text" />
+							
+						</div>
+						<br />
+						<div>
+							<span>密码</span>
+							<input id="password" class="form-control" type="password"/>
+						</div>
+						
+						<div class="checkbox">
+							<label>
+          						<input type="checkbox">请记住我
+       						</label>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" onclick="login()" class="btn btn-primary" >登录</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal -->
+		</div>
+		
+			
+						
+		<!--导航end-->
+
+
+
+
+		<!--导航下开始-->
+		<!--插入图片-->
+		<div class=container>
+			<div class="row">
+				<img src="../img/under1.jpg" width="100%" height="100px" >
+			</div>
+		</div>
+		
+		
+		<hr />
+		
+		<!--游戏粗略介绍-->
+		<div class="container">
+			<div class="row">
+				<!--分块-->
+				<div class="col-md-2 col-xs-6"><img src="../img/dota2.jpg"width="200px" height="200px" style="text-align: right;float: left; background-color: #000000;">	</div>
+				
+				
+				<div class="col-md-10">
+					<div class="row">
+						<h1 style="text-align: center;">游戏名称</h1>
+					</div>
+					<div class="row" style="text-align: center;">
+						<div>
+							<div class="col-md-6"><h3 >游戏评价</h3></div>
+							<div class="col-md-6"><h3 >游戏平台</h3></div>
+						</div>
+						<div>
+							<div class="col-md-6"><h3 >游戏评分</h3></div>
+							<div class="col-md-6"><h3 >游戏类型</h3></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<!--图片右侧部分-->
+				
+				<!--分块end-->
+			</div>
+		</div>
+		
+
+		
+		<!--游戏粗略介绍end-->	
+		
+		
+		<hr />
+		
+		
+		<!--游戏详细介绍开始-->
+		<div class="container">
+			<div class="row">
+				<p style="font-size: 20px;">
+					《Blender》可以说是steam平台上几个可以上手后就当饭吃的软件了。它已经有25年历史，以它为软体的动画，电影，模型数不胜数。不仅免费，能建模，插件很多且有很好的生态圈，而且支持流体，布料和肌肉等高级解算功能，开源，还支持32国语言。软件可以媲美C4D和3DSmax等其他的同类软件，非常贴近个人用户，是许多起源游戏模组大佬们的最爱。非常推荐有兴趣做MMD布料解算，起源模型编辑的玩家们尝试。
+				作为该系列作品的官方正版手游，本作延续了原作经典的SRPG玩法，善用兵种相克是战场上以弱制强的重点，山川、森林、河流会对不同兵种产生迥异的地形影响，保留最纯正策略元素；每位英雄拥有一套专属职业树体系，数十种职业自由转职；史上最多的关卡数，总数超300关外加多达数十种的过关方式；邀请日本超人气声优剧情全程配音，原系列作曲岩垂德行打造最新游戏音乐。曾经那一段动人心弦的英雄史诗长歌，现在，回归。
+				</p>
+			</div>
+		</div>
+		
+
+
+
+		<!--轮播开始-->
+		
+		
+		
+			<div class="container-fluid mybanner" align="center">
+				<div style="width: 700px;height: 300px;">
+					<div class="row">
+						<div id="myCarousel" class="carousel slide">
+						    <!-- 轮播（Carousel）指标 -->
+						    <ol class="carousel-indicators">
+						        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						        <li data-target="#myCarousel" data-slide-to="1"></li>
+						        <li data-target="#myCarousel" data-slide-to="2"></li>
+						    </ol>   
+						    <!-- 轮播（Carousel）项目 -->
+						    <div class="carousel-inner">
+						        <div class="item active">
+						            <img src="../img/testw.jpg" alt="First slide" width="700px"height="300px">
+						        </div>
+						        <div class="item">
+						            <img src="../img/testw.jpg" alt="Second slide" width="700px"height="300px">
+						        </div>
+						        <div class="item">
+						            <img src="../img/testw.jpg" alt="Third slide" width="700px"height="300px">
+						        </div>
+						    </div>
+						    <!-- 轮播（Carousel）导航 -->
+						    <a class="carousel-control left" href="#myCarousel" 
+						       data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a>
+						    <a class="carousel-control right" href="#myCarousel" 
+						       data-slide="next">&rsaquo;</a>
+						</div>
+					</div>
+				</div>
+		</div>
+		
+		
+			
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+		<!--轮播结束-->	
+		
+		
+				
+		<!--按钮-->
+		<div class="container">
+			<div class="row">					
+				<div align="center">
+					<button type="submit" class="btn btn-primary">添加到心愿单</button>
+					<button type="submit" class="btn btn-primary">下载游戏</button>
+				</div>
+			</div>
+		</div>
+		
+			<br />
+			<br />
+			<br />
+			<br />
+		<!--按钮结束-->	
+			
+		
+		<hr />
+		
+		<!--留言板start-->
+	
+		<div class="container" >
+			<div class="row" >	
+				<h4>评论区</h4>
+				<hr style="margin-top: 0px; margin-bottom: 5px;"/>
+			</div>
+			<div class="row">
+				<div class="paging pull-right">
+					<a target="_self" href="#" class="next">下一页</a>
+				</div>
+			</div>
+			<!--登录用户的发言-->
+			<div class="row">
+				<div class="col-md-1 col-xs-2" style="display: inline;">
+					<img src="../img/w方形图.PNG" style="width: 50px; height: 50px; border-radius: 50%; "/>
+				</div>
+				<div class="col-md-11 col-xs-10">
+					<textarea class="form-control" name="" rows="5" cols="" placeholder="请输入您的评论"></textarea>
+				</div>
+			</div>
+			<hr />
+			<!--其他人评论区-->
+			<div>
+				<!--用户1-->
+				<div class="row" >
+					<div class="col-md-1 col-xs-2" style="display: inline;">
+						<img src="../img/w方形图.PNG" style="width: 50px; height: 50px; border-radius: 50%; "/>
+					</div>
+					<div class="col-md-11 col-xs-10">
+						<div class="">
+							<span>老K</span>
+						</div>
+						<div class="">
+							<span>asdasdadsa按时大撒大撒大撒大撒大苏打as是否是看得见奥斯卡大奖撒娇的喀什觉得</span>
+						</div>
+						<div class="">
+							<span class="glyphicon glyphicon-apple"></span>
+							<span class="pull-right">2019-1-20 19:02</span>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<!--用户2-->
+				<div class="row">
+					<div class="col-md-1 col-xs-2" style="display: inline; margin-bottom: 20px;">
+						<img src="../img/w方形图.PNG" style="width: 50px; height: 50px; border-radius: 50%; "/>
+					</div>
+					<div class="col-md-11 col-xs-10">
+						<div class="">
+							<span>老W</span>
+						</div>
+						<div class="">
+							<span>asdasdadsa按时大撒大撒大撒大撒大苏打</span>
+						</div>
+						<div class="">
+							<span class="glyphicon glyphicon-apple"></span>
+							<span class="pull-right">2019-1-20 19:02</span>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<!--用户2-->
+				<div class="row">
+					<div class="col-md-1 col-xs-2" style="display: inline; margin-bottom: 20px;">
+						<img src="../img/w方形图.PNG" style="width: 50px; height: 50px; border-radius: 50%; "/>
+					</div>
+					<div class="col-md-11 col-xs-10">
+						<div class="">
+							<span>老O</span>
+						</div>
+						<div class="">
+							<span>asdasdadsa按时大撒大撒大撒大撒大苏打</span>
+						</div>
+						<div class="">
+							<span class="glyphicon glyphicon-apple"></span>
+							<span class="pull-right">2019-1-20 19:02</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--分页-->
+			<div class="row" align="center">
+				<ul class="pagination">
+					<li>
+						<a href="#">&laquo;</a>
+					</li>
+					<li>
+						<a href="#">1</a>
+					</li>
+					<li>
+						<a href="#">2</a>
+					</li>
+					<li>
+						<a href="#">3</a>
+					</li>
+					<li>
+						<a href="#">4</a>
+					</li>
+					<li>
+						<a href="#">5</a>
+					</li>
+					<li>
+						<a href="#">&raquo;</a>
+					</li>
+				</ul><br>
+			</div>
+			
+		</div>
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+		<script src="../plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/navlogin.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<script>
+				$('#myCarousel').carousel({
+					    interval: 1000
+					})
+			</script>
+	</body>
+</html>
