@@ -1,2 +1,5 @@
-wxzw\gamec\controller\helloworld.class
+wxzw\gamec\entity\GameAbstract.class
+wxzw\gamec\controller\login.class
 wxzw\gamec\listener\PathListener.class
+wxzw\gamec\controller\helloworld.class
+wxzw\gamec\entity\GameDetail.class
