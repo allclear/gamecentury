@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "g_gamedetail")
@@ -35,8 +36,22 @@ public class GameDetail implements Serializable {
      */
     private String imgDetail;
 
-    public GameDetail(){ }
+    /**
+     * 日期
+     */
+    private Date createDate;
 
+    /**
+     * 评价
+     */
+    private Integer assess;
+
+    /**
+     * 热度
+     */
+    private Integer heat;
+
+    public GameDetail(){ }
 
     @Id
     @GeneratedValue
@@ -92,8 +107,32 @@ public class GameDetail implements Serializable {
         return imgDetail;
     }
 
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
     public void setImgDetail(String imgDetail) {
         this.imgDetail = imgDetail;
+    }
+
+    public Integer getAssess() {
+        return assess;
+    }
+
+    public void setAssess(Integer assess) {
+        this.assess = assess;
+    }
+
+    public Integer getHeat() {
+        return heat;
+    }
+
+    public void setHeat(Integer heat) {
+        this.heat = heat;
     }
 
     @Override
@@ -106,6 +145,9 @@ public class GameDetail implements Serializable {
         sb.append(", describe='").append(describe).append('\'');
         sb.append(", coverImg='").append(coverImg).append('\'');
         sb.append(", imgDetail='").append(imgDetail).append('\'');
+        sb.append(", createDate='").append(createDate).append('\'');
+        sb.append(", assess='").append(assess).append('\'');
+        sb.append(", heat='").append(heat).append('\'');
         sb.append('}');
         return sb.toString();
     }

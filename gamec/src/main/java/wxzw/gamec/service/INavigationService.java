@@ -1,7 +1,10 @@
 package wxzw.gamec.service;
 
 import wxzw.gamec.dao.IUserDao;
+import wxzw.gamec.entity.GameAbstract;
 import wxzw.gamec.entity.User;
+
+import java.util.List;
 
 public interface INavigationService {
     /**
@@ -10,5 +13,6 @@ public interface INavigationService {
      * @return 1成功 0密码错误 -1账号不存在
      */
     int Login(User user);
+
 
 }

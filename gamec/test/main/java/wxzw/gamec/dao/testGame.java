@@ -6,20 +6,29 @@ import wxzw.gamec.dao.impl.GameDetailImpl;
 import wxzw.gamec.entity.GameAbstract;
 import wxzw.gamec.entity.GameDetail;
 
+import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 public class testGame {
     private IGameDetailDao igameDetailDao=new GameDetailImpl();
     private IGameAbstractDao igameAbstractDao=new GameAbstractImpl();
     @Test
     public void save(){
-        GameDetail gameDetail=new GameDetail();
-        gameDetail.setGameName("重装机兵3");
-        gameDetail.setPlantForm("NDS");
-        gameDetail.setKind("RPG");
-        gameDetail.setDescribe("科幻末世风格的22222...");
-        gameDetail.setCoverImg("/img/zzz.jpg");
-        igameDetailDao.save(gameDetail);
+        for(int i=0;i<20;i++){
+            String rm=UUID.randomUUID().toString();
+            GameDetail gameDetail=new GameDetail();
+            gameDetail.setGameName("重装"+i);
+            gameDetail.setPlantForm("FC"+i%6);
+            gameDetail.setKind("RPG"+i%6);
+            gameDetail.setDescribe("科幻末世风格"+rm+"的");
+            gameDetail.setCoverImg("/ggimg/game"+i+".jpg");
+            Date date=new Date();
+            System.out.println(date);
+            gameDetail.setCreateDate(date);
+            igameDetailDao.save(gameDetail);
+        }
+
     }
     @Test
     public void dall(){
@@ -37,7 +46,7 @@ public class testGame {
      //   gameAbstract.setId(7);
       //  gameAbstract.setGameName("重装机兵");
      //   gameAbstract.setPlantForm("FC");
-        gameAbstract.setKind("RPG");
+     //   gameAbstract.setKind("RPG");
 
         List<GameAbstract> gameAbstractList=igameAbstractDao.selectByGA(gameAbstract);
         System.err.println(gameAbstractList);

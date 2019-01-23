@@ -16,12 +16,12 @@
 
     <title></title>
 
-    <link rel="stylesheet" type="text/css" href="plugins/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="${path}/plugins/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="${path}/plugins/swiper/css/swiper.min.css">
     <!--导航栏css-->
-    <link rel="stylesheet" type="text/css" href="css/navigation.css"/>
+    <link rel="stylesheet" type="text/css" href="${path}/css/navigation.css"/>
     <!--分类css-->
-    <link rel="stylesheet" type="text/css" href="css/classification.css"/>
+    <link rel="stylesheet" type="text/css" href="${path}/css/classification.css"/>
 
     <style type="text/css">
 
@@ -55,7 +55,7 @@
 </head>
 <body>
 
-<%@include file="jsp/common/navigation.jsp"%>
+<%@include file="common/navigation.jsp"%>
 
 
 <!--分类-->
@@ -118,27 +118,11 @@
             <h4>近期热评</h4>
             <hr style="margin-top: 0px; margin-bottom: 5px;"/>
             <div style="padding-left: 15px;">
-                <ul class="" style="list-style: decimal; padding-left:0px ;" >
-                    <li><a href="#">重装机兵</a></li>
-                    <li><a href="#">热血格斗</a></li>
-                    <li><a href="#">口袋妖怪绿宝石</a></li>
-                    <li><a href="#">塞尔达传说：时之沙漏</a></li>
-                    <li><a href="#">火焰文章：圣魔之光石 塞尔达传说：时之沙漏</a></li>
-                    <li><a href="#">最终幻想7</a></li>
-                    <li><a href="#">塞尔达传说：时之沙漏</a></li>
-                    <li><a href="#">勇者斗恶龙9</a></li>
-                    <li><a href="#">最终幻想7</a></li>
-                    <li><a href="#">重装机兵：沙尘之锁</a></li>
-                    <li><a href="#">重装机兵</a></li>
-                    <li><a href="#">热血格斗</a></li>
-                    <li><a href="#">口袋妖怪绿宝石</a></li>
-                    <li><a href="#">塞尔达传说：时之沙漏</a></li>
-                    <li><a href="#">火焰文章：圣魔之光石 塞尔达传说：时之沙漏</a></li>
-                    <li><a href="#">最终幻想7</a></li>
-                    <li><a href="#">塞尔达传说：时之沙漏</a></li>
-                    <li><a href="#">勇者斗恶龙9</a></li>
-                    <li><a href="#">最终幻想7</a></li>
-                    <li><a href="#">重装机兵：沙尘之锁</a></li>
+                <ul id="rank" class="" style="list-style: decimal; padding-left:0px ;" >
+                    <!--遍历集合-->
+                    <c:forEach items="${rankList}" var="rank">
+                        <li><a href="#">${rank.gameName}</a></li>
+                    </c:forEach>
                 </ul>
             </div>
 
@@ -157,23 +141,19 @@
             <!-- Swiper -->
             <div id="myswiper" class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#"><img src="img/testw.jpg" /></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#"><img src="img/testw.jpg" /></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#"><img src="img/testw.jpg" /></a>
-                    </div>
+                    <c:forEach items="${rankList}" var="rl" begin="0" end="2" step="1">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="${path}${rl.coverImg}"/></a>
+                        </div>
+                    </c:forEach>
                 </div>
 
                 <!-- Add Pagination -->
                 <div class="swiper-pagination swiper-pagination-white"></div>
 
-                <!-- Add Arrows -->
+                <%--<!-- Add Arrows -->
                 <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-prev"></div>--%>
             </div>
 
         </div>
@@ -335,10 +315,6 @@
 
 
 
-
-
-
-
         </div>
         <!--左部最新投稿end-->
 
@@ -473,12 +449,12 @@
     </div>
 </div>
 
-<script src="plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="plugins/swiper/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="plugins/jquery/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
+<script src="${path}/plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="${path}/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="${path}/plugins/swiper/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="${path}/plugins/jquery/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
 <!--登录js-->
-<script src="js/navlogin.js" type="text/javascript" charset="utf-8"></script>
+<script src="${path}/js/navlogin.js" type="text/javascript" charset="utf-8"></script>
 
 <script type="text/javascript">
     $(function(){
@@ -532,11 +508,11 @@
             shadowOffset: 20,
             shadowScale: 0.94,
         },
-        //两边按钮
+        /*//两边按钮
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
+        },*/
     });
 
     function moreColer(){
@@ -548,7 +524,7 @@
                 "<h4>游戏1</h4>"+
                 "</div>"+
                 "<a href='#' >"+
-                "<img class='lazy' data-original='img/w方形图.PNG' alt='通用的占位符缩略图'>"+
+                "<img class='lazy' data-original='${path}/img/w方形图.PNG' alt='通用的占位符缩略图'>"+
                 "</a>"+
                 "</div>"+
                 "</div>";
@@ -571,9 +547,6 @@
         $("#newcontribute").addClass("active");
     }
 
-    function ranking() {
-
-    }
 
 </script>
 </body>

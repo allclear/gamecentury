@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "g_gamedetail")
@@ -14,6 +15,9 @@ public class GameAbstract implements Serializable {
     private String plantForm;
     private String kind;
     private String coverImg;
+    private Integer assess;
+    private Integer heat;
+    private Date createDate;
 
 
     public GameAbstract(){}
@@ -60,6 +64,30 @@ public class GameAbstract implements Serializable {
         this.coverImg = coverImg;
     }
 
+    public Integer getAssess() {
+        return assess;
+    }
+
+    public void setAssess(Integer assess) {
+        this.assess = assess;
+    }
+
+    public Integer getHeat() {
+        return heat;
+    }
+
+    public void setHeat(Integer heat) {
+        this.heat = heat;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
 
     @Override
     public String toString() {
@@ -69,6 +97,9 @@ public class GameAbstract implements Serializable {
         sb.append(", kind='").append(kind).append('\'');
         sb.append(", plantForm='").append(plantForm).append('\'');
         sb.append(", coverImg='").append(coverImg).append('\'');
+        sb.append(", createDate='").append(createDate).append('\'');
+        sb.append(", assess='").append(assess).append('\'');
+        sb.append(", heat='").append(heat).append('\'');
         sb.append('}');
         return sb.toString();
     }
