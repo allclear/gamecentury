@@ -4,10 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Entity
-@Table(name = "g_gamedes")
-public class GameDetail {
+@Table(name = "g_gamedetail")
+public class GameDetail implements Serializable {
     /**
      * 唯一标识
      */
@@ -33,6 +34,9 @@ public class GameDetail {
      * 细节图片
      */
     private String imgDetail;
+
+    public GameDetail(){ }
+
 
     @Id
     @GeneratedValue
@@ -92,6 +96,18 @@ public class GameDetail {
         this.imgDetail = imgDetail;
     }
 
-
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("GameDetail{");
+        sb.append("id=").append(id);
+        sb.append(", gameName='").append(gameName).append('\'');
+        sb.append(", kind='").append(kind).append('\'');
+        sb.append(", plantForm='").append(plantForm).append('\'');
+        sb.append(", describe='").append(describe).append('\'');
+        sb.append(", coverImg='").append(coverImg).append('\'');
+        sb.append(", imgDetail='").append(imgDetail).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 
 }

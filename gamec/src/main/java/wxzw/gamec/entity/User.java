@@ -1,21 +1,16 @@
 package wxzw.gamec.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="g_user")
+@Table(name = "g_user")
 public class User implements Serializable {
     private Integer id;
     private String userName;
     private String passWord;
 
-    public User(){
-
-    }
+    public User(){ }
 
     public User(String userName,String passWord){
         this.userName=userName;
@@ -35,11 +30,11 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
+    public String getUserName() {
         return userName;
     }
 
-    public void setName(String userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
@@ -53,9 +48,9 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("BookType{");
+        final StringBuilder sb = new StringBuilder("User{");
         sb.append("id=").append(id);
-        sb.append(", userName='").append(userName);
+        sb.append(", userName='").append(userName).append('\'');
         sb.append(", password='").append(passWord).append('\'');
         sb.append('}');
         return sb.toString();
