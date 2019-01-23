@@ -15,6 +15,8 @@ public interface IGameAbstractDao {
      */
     List<GameAbstract> selectByGA(GameAbstract gameAbstract);
 
+    List<GameAbstract> selectNew();
+
     List<GameAbstract> findAll();
 
 }

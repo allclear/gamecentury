@@ -52,6 +52,18 @@ public class GameAbstractImpl  implements IGameAbstractDao {
     }
 
     @Override
+    public List<GameAbstract> selectNew() {
+        return (List<GameAbstract>) HibernateTemplates.execute(new ISessionCallBack() {
+            @Override
+            public Object executeGame(Session session) throws HibernateException {
+                String hql="from GameAbstract order by createDate desc";
+                Query query=session.createQuery(hql);
+                return query.list();
+            }
+        });
+    }
+
+    @Override
     public List<GameAbstract> findAll() {
         return (List<GameAbstract>) HibernateTemplates.execute(new ISessionCallBack() {
             @Override

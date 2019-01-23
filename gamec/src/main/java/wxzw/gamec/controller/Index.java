@@ -20,6 +20,8 @@ public class Index extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.err.println("index");
         req.setAttribute("rankList",iIndexService.rankList());
+        req.setAttribute("newList",iIndexService.newCreate(0));
+
         req.getRequestDispatcher("/jsp/index.jsp").forward(req,resp);
     }
 }

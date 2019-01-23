@@ -51,4 +51,12 @@ public class testGame {
         List<GameAbstract> gameAbstractList=igameAbstractDao.selectByGA(gameAbstract);
         System.err.println(gameAbstractList);
     }
+
+    @Test
+    public void newL(){
+        List<GameAbstract> l=igameAbstractDao.selectNew();
+        for(GameAbstract temp:l){
+            System.out.println(temp);
+        }
+    }
 }

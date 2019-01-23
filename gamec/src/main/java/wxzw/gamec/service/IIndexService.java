@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface IIndexService {
     List<GameAbstract> rankList();
+
+    List<GameAbstract> newCreate(Integer x);
 }

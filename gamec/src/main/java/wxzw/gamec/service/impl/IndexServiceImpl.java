@@ -26,4 +26,23 @@ public class IndexServiceImpl implements IIndexService {
 
         return rl;
     }
+
+    @Override
+    public List<GameAbstract> newCreate(Integer x) {
+        List<GameAbstract> abstractList=iGameAbstractDao.selectNew();
+        List<GameAbstract> resultList=new ArrayList<>();
+
+        int i=0;
+        for(GameAbstract ga:abstractList){
+            if(i>=8){
+                break;
+            }
+            resultList.add(ga);
+            i++;
+        }
+
+        System.out.println(resultList);
+
+        return resultList;
+    }
 }

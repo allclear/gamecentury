@@ -187,128 +187,22 @@
                 </div>
 
                 <div class="row" style="border: 1px solid #ddd; border-top: none; padding-top: 10px;">
-
-                    <div class="col-xs-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#" class="">
-                                <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                            </a>
-                            <h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
-                                伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
-                            </h6>
-                            <div>
-                                <span class="badge">12</span>
-                                <span class="glyphicon glyphicon-align-right pull-right"></span>
+                    <c:forEach items="${newList}" var="nl" begin="0" end="7" step="1">
+                        <div class="col-xs-6 col-md-3">
+                            <div class="thumbnail">
+                                <a href="#" class="">
+                                    <img class="lazy" data-original="${path}${nl.coverImg}" alt="通用的占位符缩略图">
+                                </a>
+                                <h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
+                                    伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
+                                </h6>
+                                <div>
+                                    <span class="badge">12</span>
+                                    <span class="glyphicon glyphicon-align-right pull-right"></span>
+                                </div>
                             </div>
-
                         </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#" class="">
-                                <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                            </a>
-                            <h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
-                                伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
-                            </h6>
-                            <div>
-                                <span class="badge">12</span>
-                                <span class="glyphicon glyphicon-align-right pull-right"></span>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#" class="">
-                                <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                            </a>
-                            <h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
-                                伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
-                            </h6>
-                            <div>
-                                <span class="badge">12</span>
-                                <span class="glyphicon glyphicon-align-right pull-right"></span>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#" class="">
-                                <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                            </a>
-                            <h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
-                                伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
-                            </h6>
-                            <div>
-                                <span class="badge">12</span>
-                                <span class="glyphicon glyphicon-align-right pull-right"></span>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#" class="">
-                                <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                            </a>
-                            <h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
-                                伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
-                            </h6>
-                            <div>
-                                <span class="badge">12</span>
-                                <span class="glyphicon glyphicon-align-right pull-right"></span>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#" class="">
-                                <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                            </a>
-                            <h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
-                                伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
-                            </h6>
-                            <div>
-                                <span class="badge">12</span>
-                                <span class="glyphicon glyphicon-align-right pull-right"></span>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#" class="">
-                                <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                            </a>
-                            <h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
-                                伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
-                            </h6>
-                            <div>
-                                <span class="badge">12</span>
-                                <span class="glyphicon glyphicon-align-right pull-right"></span>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#" class="">
-                                <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                            </a>
-                            <h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
-                                伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
-                            </h6>
-                            <div>
-                                <span class="badge">12</span>
-                                <span class="glyphicon glyphicon-align-right pull-right"></span>
-                            </div>
-
-                        </div>
-                    </div>
-
+                    </c:forEach>
 
                 </div>
             </div>
