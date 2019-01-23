@@ -4,17 +4,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Entity
-@Table(name = "g_gamelib")
-public class GameAbstract {
+@Table(name = "g_gamedetail")
+public class GameAbstract implements Serializable {
     private Integer id;
     private String gameName;
     private String plantForm;
     private String kind;
     private String coverImg;
-    private String describe;
-    private String imgDetail;
+
+
+    public GameAbstract(){}
 
     @Id
     @GeneratedValue
@@ -58,20 +60,17 @@ public class GameAbstract {
         this.coverImg = coverImg;
     }
 
-    public String getDescribe() {
-        return describe;
-    }
 
-    public void setDescribe(String describe) {
-        this.describe = describe;
-    }
-
-    public String getImgDetail() {
-        return imgDetail;
-    }
-
-    public void setImgDetail(String imgDetail) {
-        this.imgDetail = imgDetail;
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("GameAbstract{");
+        sb.append("id=").append(id);
+        sb.append(", gameName='").append(gameName).append('\'');
+        sb.append(", kind='").append(kind).append('\'');
+        sb.append(", plantForm='").append(plantForm).append('\'');
+        sb.append(", coverImg='").append(coverImg).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 
 }

@@ -38,6 +38,9 @@
         <property name="hbm2ddl.auto">update</property>
 
         <mapping class="wxzw.gamec.entity.User"></mapping>
+        <mapping class="wxzw.gamec.entity.UserDetail"></mapping>
+        <mapping class="wxzw.gamec.entity.GameDetail"></mapping>
+        <mapping class="wxzw.gamec.entity.GameAbstract"></mapping>
 
     </session-factory>
 

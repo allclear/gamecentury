@@ -24,11 +24,37 @@ public class UserDaoImpl implements IUserDao {
     }
 
     @Override
+    public User selectByUserName(String username) {
+        return (User) HibernateTemplates.execute(new ISessionCallBack() {
+            @Override
+            public Object executeGame(Session session) throws HibernateException {
+                String hql="from User where userName =:username";
+                Query query=session.createQuery(hql);
+                query.setParameter("username",username);
+                return query.uniqueResult();
+            }
+        });
+    }
+
+    @Override
     public List<User> findAll() {
         return (List<User>) HibernateTemplates.execute(new ISessionCallBack() {
             @Override
             public Object executeGame(Session session) throws HibernateException {
                 return session.createQuery("from User").list();
+            }
+        });
+    }
+
+    @Override
+    public List<User> findAllBy(String user) {
+        return (List<User>) HibernateTemplates.execute(new ISessionCallBack() {
+            @Override
+            public Object executeGame(Session session) throws HibernateException {
+                String hql="from User where userName =:username";
+                Query query=session.createQuery(hql);
+                query.setParameter("username",user);
+                return query.list();
             }
         });
     }

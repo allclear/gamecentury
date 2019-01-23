@@ -4,6 +4,7 @@ import org.junit.Test;
 import wxzw.gamec.dao.impl.UserDaoImpl;
 import wxzw.gamec.entity.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class testUserDao {
@@ -11,9 +12,20 @@ public class testUserDao {
 
     @Test
     public void save(){
-        User user=new User("www","123");
+        List<User> userList=new ArrayList<>();
+        for(int i=1;i<=5;i++){
+            User user=new User("w"+i,"123");
+            userList.add(user);
+        }
+        for(User u:userList){
+            iUserDao.save(u);
+        }
 
-        iUserDao.save(user);
+    }
+
+    @Test
+    public void se(){
+        System.err.println(iUserDao.selectByUserName("w1"));
     }
 
     @Test
@@ -24,6 +36,12 @@ public class testUserDao {
                 System.out.println(user);
             }
         }
+    }
+
+    @Test
+    public void tall(){
+        List<User> user=iUserDao.findAllBy(null);
+        System.err.println(user);
     }
 
     @Test
