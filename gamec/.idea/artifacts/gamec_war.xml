@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gamec:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="gamec.war">
+      <element id="artifact" artifact-name="gamec:war exploded" />
+    </root>
+  </artifact>
+</component>
