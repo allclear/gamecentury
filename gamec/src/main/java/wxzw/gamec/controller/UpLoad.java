@@ -16,7 +16,7 @@ import java.io.PrintWriter;
 import java.util.Date;
 
 @WebServlet(urlPatterns = "/upload")
-@MultipartConfig(location = "D:/upload/", maxFileSize = 1024 * 1024 * 10)
+@MultipartConfig(maxFileSize = 1024 * 1024 * 10)
 public class UpLoad extends HttpServlet {
     private IGameDetailDao iGameDetailDao=new GameDetailImpl();
 

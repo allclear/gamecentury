@@ -5,12 +5,14 @@ import wxzw.gamec.service.ISearchService;
 import wxzw.gamec.service.impl.SearchServiceImpl;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+@WebServlet("/search")
 public class SearchResult extends HttpServlet {
     private ISearchService iSearchService=new SearchServiceImpl();
     @Override

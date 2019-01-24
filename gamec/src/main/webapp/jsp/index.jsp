@@ -35,6 +35,8 @@
         #myswiper img{
             width: 100%;
             height: 100%;
+            max-width: 750px;
+            max-height: 380px;
         }
 
         #colerlist div.thumbnail {
@@ -50,65 +52,21 @@
             transform: scale(1.2);
         }
 
+        .thumbnail a > img, .thumbnail > img {
+            width: 100%;
+            height: 100%;
+            max-width: 147px;
+            max-height: 115px;
+        }
+
     </style>
 
 </head>
 <body>
-
+<%--引入导航--%>
 <%@include file="common/navigation.jsp"%>
-
-
-<!--分类-->
-<div class="container">
-    <div class="row">
-        <hr  />
-    </div>
-
-
-    <div class="row plantform">
-        <div class="col-md-1 col-xs-2">
-            <div class="mydiv" style="background-color: #31B0D5;width: 54px;margin-right: 20px;">
-                <span style="font: '微软雅黑'; font-weight: bolder; color: white;">平台</span>
-            </div>
-        </div>
-        <div id="plants" class="col-md-11 col-xs-10">
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>FC</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>SFC</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>GB</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>GBC</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>GBA</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>NDS</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>PS</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>PSP</span></a></div>
-        </div>
-    </div>
-
-    <div class="row">
-        <hr  />
-    </div>
-
-    <div class="row plantform">
-        <div class="col-md-1 col-xs-2">
-            <div class="mydiv" style="background-color: #31B0D5;width: 54px;margin-right: 20px;">
-                <span style="font: '微软雅黑'; font-weight: bolder; color: white;">类型</span>
-            </div>
-        </div>
-        <div class="col-md-11 col-xs-10">
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>角色扮演</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>冒险</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>动作</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>射击</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>格斗</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>竞速</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>体育</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>策略</span></a></div>
-        </div>
-    </div>
-
-    <div class="row">
-        <hr  />
-    </div>
-</div>
+<%--引入分类--%>
+<%@include file="common/classfi.jsp"%>
 
 <div class="container">
     <div class="row">
@@ -143,7 +101,7 @@
                 <div class="swiper-wrapper">
                     <c:forEach items="${rankList}" var="rl" begin="0" end="2" step="1">
                         <div class="swiper-slide">
-                            <a href="#"><img src="${path}${rl.coverImg}"/></a>
+                            <a href="#"><img src="${path}${rl.coverImg}" /></a>
                         </div>
                     </c:forEach>
                 </div>
@@ -191,7 +149,7 @@
                         <div class="col-xs-6 col-md-3">
                             <div class="thumbnail">
                                 <a href="#" class="">
-                                    <img class="lazy" data-original="${path}${nl.coverImg}" alt="通用的占位符缩略图">
+                                    <img class="lazy" data-original="${path}${nl.coverImg}" alt="通用的占位符缩略图" >
                                 </a>
                                 <h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
                                     伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
@@ -351,7 +309,6 @@
     function changeToDynamic(){
         $("#newcontribute").removeClass("active");
         $("#newdynamic").addClass("active");
-
 
     }
 
