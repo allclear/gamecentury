@@ -55,11 +55,12 @@ public class UpLoad extends HttpServlet {
             }
         }
         iGameDetailDao.save(gameDetail);
-        resp.setContentType("text/html;charset=utf-8");
+        /*resp.setContentType("text/html;charset=utf-8");
         PrintWriter out = resp.getWriter();
         out.println("上传成功");
         out.flush();
-        out.close();
+        out.close();*/
+        resp.sendRedirect("/gamec/contribute");
     }
 
     /**

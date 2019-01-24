@@ -152,10 +152,10 @@
                                     <img class="lazy" data-original="${path}${nl.coverImg}" alt="通用的占位符缩略图" >
                                 </a>
                                 <h6 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
-                                    伊苏8:游戏的舞台为曾经被称作“永远的被诅咒之岛”
+                                        ${nl.describe}
                                 </h6>
                                 <div>
-                                    <span class="badge">12</span>
+                                    <span class="badge">${nl.assess}</span>
                                     <span class="glyphicon glyphicon-align-right pull-right"></span>
                                 </div>
                             </div>
@@ -216,7 +216,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="footer">footer</div>
+        <div class="footer"></div>
     </div>
 </div>
 

@@ -14,6 +14,7 @@ public class GameAbstract implements Serializable {
     private String gameName;
     private String plantForm;
     private String kind;
+    private String describe;
     private String coverImg;
     private Integer assess;
     private Integer heat;
@@ -54,6 +55,14 @@ public class GameAbstract implements Serializable {
 
     public void setKind(String kind) {
         this.kind = kind;
+    }
+
+    public String getDescribe() {
+        return describe;
+    }
+
+    public void setDescribe(String describe) {
+        this.describe = describe;
     }
 
     public String getCoverImg() {
