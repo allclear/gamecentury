@@ -34,7 +34,7 @@
                     <div id="tleft" class="col-md-4 col-sm-10" >
                         <ul class="nav navbar-nav" style="width: 100%;">
                             <li class="col-md-push-1 col-md-4 col-sm-2 col-xs-4" style="">
-                                <a href="#" style=""><span>投稿</span></a>
+                                <a href="${path}/contribute" style=""><span>投稿</span></a>
                             </li>
                             <li class="col-md-push-1 col-md-4 col-sm-2 col-xs-4" style="">
                                 <a href="#" style=""><span>评论</span></a>
