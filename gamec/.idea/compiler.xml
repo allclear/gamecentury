@@ -9,5 +9,8 @@
         <module name="gamec" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gamec" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

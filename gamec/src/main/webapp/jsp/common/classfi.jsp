@@ -21,7 +21,7 @@
             </div>
         </div>
         <div id="plants" class="col-md-11 col-xs-10">
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>FC</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search"><span>FC</span></a></div>
             <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>SFC</span></a></div>
             <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>GB</span></a></div>
             <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>GBC</span></a></div>
