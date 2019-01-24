@@ -9,10 +9,16 @@ public class UserDetail implements Serializable {
     private Integer id;
     private String introduce;
     private String msgBoard;
-
+    private String signture;
     private UserDetail userDetail;
 
     public UserDetail(){ }
+
+    public UserDetail(String introduce, String msgBoard,String signture) {
+        this.introduce = introduce;
+        this.msgBoard = msgBoard;
+        this.signture = signture;
+    }
 
     @Id
     @GeneratedValue
@@ -38,6 +44,14 @@ public class UserDetail implements Serializable {
 
     public void setMsgBoard(String msgBoard) {
         this.msgBoard = msgBoard;
+    }
+
+    public String getSignture() {
+        return signture;
+    }
+
+    public void setSignture(String signture) {
+        this.signture = signture;
     }
 
     @OneToOne
