@@ -15,7 +15,7 @@
         <nav id="toptitle" class="navbar navbar-default" >
             <div class="container-fluid">
                 <div id="header" class="navbar-header ">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="${path}/index">
                         <span id="">GameCentury</span>
                     </a>
 

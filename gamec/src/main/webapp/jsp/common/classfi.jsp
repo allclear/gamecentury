@@ -21,14 +21,15 @@
             </div>
         </div>
         <div id="plants" class="col-md-11 col-xs-10">
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search"><span>FC</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>SFC</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>GB</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>GBC</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>GBA</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>NDS</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>PS</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>PSP</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?plantForm=PC"><span>PC</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?plantForm=FC"><span>FC</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?plantForm=SFC"><span>SFC</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?plantForm=GB"><span>GB</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?plantForm=GBC"><span>GBC</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?plantForm=GBA"><span>GBA</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?plantForm=NDS"><span>NDS</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?plantForm=PS"><span>PS</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?plantForm=PSP"><span>PSP</span></a></div>
         </div>
     </div>
 
@@ -43,14 +44,14 @@
             </div>
         </div>
         <div class="col-md-11 col-xs-10">
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>角色扮演</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>冒险</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>动作</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>射击</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>格斗</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>竞速</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>体育</span></a></div>
-            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="#"><span>策略</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?kind=角色扮演"><span>角色扮演</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?kind=冒险"><span>冒险</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?kind=动作"><span>动作</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?kind=射击"><span>射击</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?kind=格斗"><span>格斗</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?kind=竞速"><span>竞速</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?kind=体育"><span>体育</span></a></div>
+            <div style="display: inline; margin-right: 20px; font-size: 18px;"><a href="${path}/search?kind=策略"><span>策略</span></a></div>
         </div>
     </div>
 
