@@ -26,6 +26,7 @@ public class Login extends HttpServlet {
 
         if(1==loginResult){
             User user=new User();
+            user.setId(u.getId());
             user.setUserName(username);
             req.getSession().setAttribute("user",user);
         }
