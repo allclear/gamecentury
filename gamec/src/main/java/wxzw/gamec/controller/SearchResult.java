@@ -16,16 +16,23 @@ public class SearchResult extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //..todo 获取筛选条件
+        String kind=req.getParameter("kind");
+        String plantForm= req.getParameter("plantForm");
+
 
         GameAbstract gameAbstract=new GameAbstract();
         //设置
-        //gameAbstract.setKind("RPG");
-        //gameAbstract.setPlantForm("FC");
+        gameAbstract.setKind(kind);
+        gameAbstract.setPlantForm(plantForm);
 
         //获取
         List<GameAbstract> listResult=iSearchService.searchList(gameAbstract);
 
+        //设置阈值
+        req.setAttribute("searchResult",listResult);
         //返回
+
+        req.getRequestDispatcher("/jsp/search_info.jsp").forward(req,resp);
 
     }
 }

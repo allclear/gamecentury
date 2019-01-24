@@ -24,8 +24,9 @@ public class testGame {
             gameDetail.setDescribe("科幻末世风格"+rm+"的");
             gameDetail.setCoverImg("/ggimg/game"+i+".jpg");
             Date date=new Date();
-            System.out.println(date);
             gameDetail.setCreateDate(date);
+            gameDetail.setAssess(i);
+            gameDetail.setHeat(i);
             igameDetailDao.save(gameDetail);
         }
 
@@ -34,10 +35,11 @@ public class testGame {
     public void dall(){
         List<GameDetail> gameDetails=igameDetailDao.findAll();
         System.err.println(gameDetails);
+
     }
     @Test
     public void all(){
-        List<GameAbstract> gameAbstractList=igameAbstractDao.findAll();
+        List<GameAbstract> gameAbstractList=igameAbstractDao.selectHighHeatLowAssess();
         System.err.println(gameAbstractList);
     }
     @Test
@@ -50,5 +52,13 @@ public class testGame {
 
         List<GameAbstract> gameAbstractList=igameAbstractDao.selectByGA(gameAbstract);
         System.err.println(gameAbstractList);
+    }
+
+    @Test
+    public void newL(){
+        List<GameAbstract> l=igameAbstractDao.selectNew();
+        for(GameAbstract temp:l){
+            System.out.println(temp);
+        }
     }
 }

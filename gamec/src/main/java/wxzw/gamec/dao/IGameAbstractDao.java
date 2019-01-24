@@ -15,6 +15,14 @@ public interface IGameAbstractDao {
      */
     List<GameAbstract> selectByGA(GameAbstract gameAbstract);
 
+    List<GameAbstract> selectNew();
+
+    List<GameAbstract> selectHighAssess();
+
+    List<GameAbstract> selectHighHeat();
+
+    List<GameAbstract> selectHighHeatLowAssess();
+
     List<GameAbstract> findAll();
 
 }
