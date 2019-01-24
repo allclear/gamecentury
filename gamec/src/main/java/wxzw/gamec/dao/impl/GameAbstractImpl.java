@@ -64,6 +64,42 @@ public class GameAbstractImpl  implements IGameAbstractDao {
     }
 
     @Override
+    public List<GameAbstract> selectHighAssess() {
+        return (List<GameAbstract>) HibernateTemplates.execute(new ISessionCallBack() {
+            @Override
+            public Object executeGame(Session session) throws HibernateException {
+                String hql="from GameAbstract order by assess desc";
+                Query query=session.createQuery(hql);
+                return query.list();
+            }
+        });
+    }
+
+    @Override
+    public List<GameAbstract> selectHighHeat() {
+        return (List<GameAbstract>) HibernateTemplates.execute(new ISessionCallBack() {
+            @Override
+            public Object executeGame(Session session) throws HibernateException {
+                String hql="from GameAbstract order by heat desc";
+                Query query=session.createQuery(hql);
+                return query.list();
+            }
+        });
+    }
+
+    @Override
+    public List<GameAbstract> selectHighHeatLowAssess() {
+        return (List<GameAbstract>) HibernateTemplates.execute(new ISessionCallBack() {
+            @Override
+            public Object executeGame(Session session) throws HibernateException {
+                String hql="from GameAbstract order by heat desc,assess asc";
+                Query query=session.createQuery(hql);
+                return query.list();
+            }
+        });
+    }
+
+    @Override
     public List<GameAbstract> findAll() {
         return (List<GameAbstract>) HibernateTemplates.execute(new ISessionCallBack() {
             @Override

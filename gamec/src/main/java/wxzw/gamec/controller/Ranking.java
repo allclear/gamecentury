@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(urlPatterns = "/index/rank")
 public class Ranking extends HttpServlet {
     private IGameAbstractDao iGameAbstractDao=new GameAbstractImpl();
     @Override

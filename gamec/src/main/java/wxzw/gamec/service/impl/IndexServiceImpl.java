@@ -12,8 +12,7 @@ public class IndexServiceImpl implements IIndexService {
     private IGameAbstractDao iGameAbstractDao=new GameAbstractImpl();
     @Override
     public List<GameAbstract> rankList() {
-        GameAbstract gameAbstract=new GameAbstract();
-        List<GameAbstract> list=iGameAbstractDao.selectByGA(gameAbstract);
+        List<GameAbstract> list=iGameAbstractDao.selectHighAssess();
         List<GameAbstract> rl=new ArrayList<>();
         int i=0;
         for(GameAbstract t:list){
@@ -45,4 +44,43 @@ public class IndexServiceImpl implements IIndexService {
 
         return resultList;
     }
+
+    @Override
+    public List<GameAbstract> newHighHeat(Integer x) {
+        List<GameAbstract> abstractList=iGameAbstractDao.selectHighHeat();
+        List<GameAbstract> resultList=new ArrayList<>();
+
+        int i=0;
+        for(GameAbstract ga:abstractList){
+            if(i>=8){
+                break;
+            }
+            resultList.add(ga);
+            i++;
+        }
+
+        System.out.println(resultList);
+
+        return resultList;
+    }
+
+    @Override
+    public List<GameAbstract> lowAccessHighHeat(Integer x) {
+        List<GameAbstract> abstractList=iGameAbstractDao.selectHighHeatLowAssess();
+        List<GameAbstract> resultList=new ArrayList<>();
+        int i=0;
+        for(GameAbstract ga:abstractList){
+            if(i>=8){
+                break;
+            }
+            resultList.add(ga);
+            i++;
+        }
+
+        System.out.println(resultList);
+
+        return resultList;
+    }
+
+
 }

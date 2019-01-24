@@ -203,11 +203,8 @@
                             </div>
                         </div>
                     </c:forEach>
-
                 </div>
             </div>
-
-
 
         </div>
         <!--左部最新投稿end-->
@@ -222,97 +219,19 @@
             <div>
                 <div class="container-fluid">
                     <div id="colerlist" class="row">
+                        <c:forEach items="${coldList}" var="cl" begin="0" end="7" step="1">
+                            <div class="col-xs-6 col-md-3">
+                                <div class="thumbnail">
+                                    <div style="">
+                                        <h4>${cl.gameName}</h4>
+                                    </div>
+                                    <a href="#" class="">
+                                        <img class="lazy" data-original="${path}${cl.coverImg}" alt="通用的占位符缩略图">
+                                    </a>
 
-                        <div class="col-xs-6 col-md-3">
-                            <div class="thumbnail">
-                                <div style="">
-                                    <h4>游戏1</h4>
                                 </div>
-                                <a href="#" class="">
-                                    <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                                </a>
-
                             </div>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <div class="thumbnail">
-                                <div style="">
-                                    <h4>游戏1</h4>
-                                </div>
-                                <a href="#" class="">
-                                    <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <div class="thumbnail">
-                                <div style="">
-                                    <h4>游戏1</h4>
-                                </div>
-                                <a href="#" class="">
-                                    <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <div class="thumbnail">
-                                <div style="">
-                                    <h4>游戏1</h4>
-                                </div>
-                                <a href="#" class="">
-                                    <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <div class="thumbnail">
-                                <div style="">
-                                    <h4>游戏1</h4>
-                                </div>
-                                <a href="#" class="">
-                                    <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <div class="thumbnail">
-                                <div style="">
-                                    <h4>游戏1</h4>
-                                </div>
-                                <a href="#" class="">
-                                    <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <div class="thumbnail">
-                                <div style="">
-                                    <h4>游戏1</h4>
-                                </div>
-                                <a href="#" class="">
-                                    <img class="lazy" data-original="img/w方形图.PNG" alt="通用的占位符缩略图">
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class='col-xs-6 col-md-3'>
-                            <div class='thumbnail'>
-                                <div>
-                                    <h4>游戏1</h4>
-                                </div>
-                                <a href='#' >
-                                    <img class='lazy' data-original='img/w方形图.PNG' alt='通用的占位符缩略图'>
-                                </a>
-
-                            </div>
-                        </div>
-
-
+                        </c:forEach>
                     </div>
                     <hr />
                     <!--row end-->

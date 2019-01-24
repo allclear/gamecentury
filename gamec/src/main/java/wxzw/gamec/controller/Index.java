@@ -21,6 +21,8 @@ public class Index extends HttpServlet {
         System.err.println("index");
         req.setAttribute("rankList",iIndexService.rankList());
         req.setAttribute("newList",iIndexService.newCreate(0));
+        req.setAttribute("newHighHeat",iIndexService.newHighHeat(0));
+        req.setAttribute("coldList",iIndexService.lowAccessHighHeat(0));
 
         req.getRequestDispatcher("/jsp/index.jsp").forward(req,resp);
     }
